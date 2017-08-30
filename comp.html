@@ -3,16 +3,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <!-- CSS -->
-  <link rel="stylesheet" href="./css/the.css"/>
-  <!-- JavaScript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="./js/script.js"></script>
+  <link rel="stylesheet" href="./css/Screen.css"/>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="./lib/favicon.ico"/>
   <title>Emily Jean Liu | Compositions</title>
 </head>
 
 <body>
+  <!--Title-->
+  <div id="name-title">
+      <h1>Emily Jean Liu</h1>
+  </div>
+  <!--Dropdown-->
+  <div class="dropdown">
+    <div id="drop-menu" class="drop-style">
+      <button onclick="location.href='index.html'" type="button">Home</button>
+      <button onclick="location.href='gap.html'" type="button">Gap Year</button>
+      <button onclick="location.href='reading.html'" type="button">Reading List</button>
+      <button onclick="location.href='comp.html'" type="button">Compositions</button>
+      <button onclick="location.href='about.html'" type="button">About</button>
+    </div>
+    <button onclick="showDropdown()" class="drop-btn" type="button">MENU</button>
+  </div>
   <!-- Navbar -->
   <div class="navbar">
     <ul>
@@ -23,9 +35,6 @@
       <li><a href="about.html">About</a></li>
     </ul>
   </div>
-  <div id="name-title">
-      <h1>Emily Jean Liu</h1>
-  </div>
 
   <!--Compositions-->
   <div class="box">
@@ -33,5 +42,11 @@
       <p>Coming soon...</p>
     </div>
   </div>
+  <!--JavaScript-->
+  <script>
+  function showDropdown(){
+    document.getElementById('drop-menu').classList.toggle("new-drop-style");
+  }
+  </script>
 </body>
 </html>

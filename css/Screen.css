@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Hind');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+:root {
+  /*--main-color: #247F99;*/
+  --main-color: #fff;
+  --link-inactive: #000;
+  --text-light: #FC6634;
+  --text-dark: #000;
+  --emphasis: #F78E47;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+html, body {
+  height: 100%;
+  margin: 0 0 0 0;
+  background-color: var(--main-color);
+}
+p, ol {
+  font: 18px 'EB Garamond', serif;
+}
+h2 {
+  font: bold 18px 'EB Garamond', serif
+}
+a {
+  text-decoration: none;
+}
+ul {
+  text-align: center;
+  list-style-type: none;
+}
+#name-title {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+}
+#name-title h1 {
+  font-size: 40px;
+  font-family: 'EB Garamond', serif;
+  letter-spacing: 2px;
+}
+@media all and (min-width: 650px) {
+  body {
+    position: relative;
+  }
+  a:link{
+    color: var(--link-inactive);
+  }
+  a:visited{
+    color: var(--link-inactive);
+  }
+  a:hover{
+    color: var(--text-light);
+    text-decoration: overline;
+  }
+  .dropdown {
+    display: none;
+  }
+  .navbar {
+    position: absolute;
+    margin-top: 10px;
+    top: 60px;
+    height: 40px;
+    width: 100%;
+  }
+  .navbar ul {
+    margin-top: 15px;
+  }
+  .navbar ul li {
+    display: inline;
+    padding: 0 20px 0 20px;
+    text-decoration: none;
+  }
+  .navbar ul li a {
+    font-family: 'Hind', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+  #current{
+    color: var(--text-light);
+    text-decoration: overline;
+  }
+  .section {
+    height: 100%;
+    /*border-bottom: solid 2px;*/
+  }
+  .box {
+    position: relative;
+    top: 125px;
+    /*height: 100%;*/
+    width: 100%;
+    text-align: center;
+  }
+  .content {
+    position: relative;
+    left: 25%;
+    width: 50%;
+    text-align: justify;
+    border-top: solid 2px var(--text-light);
+    padding: 10px;
+  }
+  #home-img {
+    width: 600px;
+  }
+  #home-caption {
+    margin-top: 10px;
+  }
+
+}
+
+@media all and (max-width: 649px) {
+a:link, a:visited{
+  color: var(--link-inactive);
+}
+.navbar {
+  display: none;
+}
+.box {
+  position: relative;
+  top: 80px;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+}
+#home-img {
+  width: 300px;
+  z-index: 1;
+}
+#home-caption {
+  margin-top: 8px;
+}
+#home-caption p {
+  font-size: 15px;
+}
+.dropdown {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  /*background-color: var(--text-light);*/
+}
+button {
+  width: 100%;
+  margin: 0;
+  padding: 15px 0 15px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--link-inactive);
+  background-color: var(--main-color);
+  border-top: 1.5px solid var(--link-inactive);
+}
+.drop-btn {
+  position: relative;
+  z-index: 2;
+  background-color: var(--link-inactive);
+  color: var(--main-color);
+}
+.drop-btn:hover {
+  background-color: var(--text-light);
+  color: var(--main-color);
+  border-color: var(--text-light);
+}
+button:hover {
+  background-color: var(--link-inactive);
+  color: var(--main-color);
+}
+.drop-style {
+  display: none;
+  position: relative;
+  z-index: 2;
+  font-family: 'Hind', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+}
+.new-drop-style {
+  display: block;
+  /*background-color: red;*/
+}
+ol {
+  font-size: 14px;
+}
+}
