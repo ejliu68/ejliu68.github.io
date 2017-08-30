@@ -39,9 +39,13 @@ a:hover{
   color: var(--text-light);
   text-decoration: overline;
 }
-p {
+p, ol {
   font: 18px 'EB Garamond', serif;
 }
+h2 {
+  font: bold 18px 'EB Garamond', serif
+}
+
 #name-title {
   position: fixed;
   top: 10px;
@@ -65,19 +69,18 @@ p {
   width: 100%;
 
 }
-ul {
-  margin-top: 10px;
-  margin-right: 10px;
+.navbar ul {
+  margin-top: 15px;
   text-align: center;
   list-style-type: none;
 
 }
-ul li {
+.navbar ul li {
   display: inline;
   padding: 0 20px 0 20px;
   text-decoration: none;
 }
-ul li a {
+.navbar ul li a {
   font-family: 'Hind', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
@@ -94,7 +97,7 @@ ul li a {
 }
 .box {
   position: fixed;
-  top: 130px;
+  top: 125px;
   height: 100%;
   width: 100%;
   /*background-color: red;*/
@@ -107,4 +110,7 @@ ul li a {
   text-align: justify;
   border-top: solid 2px var(--text-light);
   padding: 10px;
+}
+.content ol {
+
 }
