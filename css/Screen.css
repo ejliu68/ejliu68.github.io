@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Hind');
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
 :root {
-  /*--main-color: #247F99;*/
-  --main-color: #fff;
-  --link-inactive: #000;
-  --text-light: #FC6634;
-  --text-dark: #000;
-  --emphasis: #F78E47;
+  /*--light: #247F99;*/
+  --light: #fff;
+  --dark: #000;
+  --accent: #FC6634;
 }
 * {
   margin: 0;
@@ -19,7 +17,7 @@
 html, body {
   height: 100%;
   margin: 0 0 0 0;
-  background-color: var(--main-color);
+  background-color: var(--light);
 }
 p, ol {
   font: 18px 'EB Garamond', serif;
@@ -45,18 +43,33 @@ ul {
   font-family: 'EB Garamond', serif;
   letter-spacing: 2px;
 }
+.reading-section {
+  padding-top: 10px;
+  font-weight: lighter;
+}
+#reading-header {
+  text-align: center;
+}
+.content {
+  position: relative;
+  text-align: justify;
+  left: 25%;
+  width: 50%;
+  border-top: solid 2px var(--accent);
+  padding: 10px;
+}
 @media all and (min-width: 650px) {
   body {
     position: relative;
   }
   a:link{
-    color: var(--link-inactive);
+    color: var(--dark);
   }
   a:visited{
-    color: var(--link-inactive);
+    color: var(--dark);
   }
   a:hover{
-    color: var(--text-light);
+    color: var(--accent);
     text-decoration: overline;
   }
   .dropdown {
@@ -85,7 +98,7 @@ ul {
     letter-spacing: 1.5px;
   }
   #current{
-    color: var(--text-light);
+    color: var(--accent);
     text-decoration: overline;
   }
   .section {
@@ -101,92 +114,93 @@ ul {
   }
   .content {
     position: relative;
+    text-align: justify;
     left: 25%;
     width: 50%;
-    text-align: justify;
-    border-top: solid 2px var(--text-light);
+    border-top: solid 2px var(--accent);
     padding: 10px;
-  }
+}
   #home-img {
     width: 600px;
   }
   #home-caption {
     margin-top: 10px;
   }
-
 }
 
 @media all and (max-width: 649px) {
-a:link, a:visited{
-  color: var(--link-inactive);
-}
-.navbar {
-  display: none;
-}
-.box {
-  position: relative;
-  top: 80px;
-  width: 100%;
-  text-align: center;
-  z-index: 0;
-}
-#home-img {
-  width: 300px;
-  z-index: 1;
-}
-#home-caption {
-  margin-top: 8px;
-}
-#home-caption p {
-  font-size: 15px;
-}
-.dropdown {
-  position: absolute;
-  text-align: center;
-  bottom: 0;
-  width: 100%;
-  /*background-color: var(--text-light);*/
-}
-button {
-  width: 100%;
-  margin: 0;
-  padding: 15px 0 15px 0;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--link-inactive);
-  background-color: var(--main-color);
-  border-top: 1.5px solid var(--link-inactive);
-}
-.drop-btn {
-  position: relative;
-  z-index: 2;
-  background-color: var(--link-inactive);
-  color: var(--main-color);
-}
-.drop-btn:hover {
-  background-color: var(--text-light);
-  color: var(--main-color);
-  border-color: var(--text-light);
-}
-button:hover {
-  background-color: var(--link-inactive);
-  color: var(--main-color);
-}
-.drop-style {
-  display: none;
-  position: relative;
-  z-index: 2;
-  font-family: 'Hind', sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 14px;
-  letter-spacing: 1.5px;
-}
-.new-drop-style {
-  display: block;
-  /*background-color: red;*/
-}
-ol {
-  font-size: 14px;
-}
+  a:link, a:visited{
+    color: var(--dark);
+  }
+  .navbar {
+    display: none;
+  }
+  .box {
+    position: relative;
+    top: 80px;
+    width: 100%;
+    text-align: center;
+    z-index: 0;
+  }
+  #home-img {
+    width: 300px;
+    z-index: 1;
+  }
+  #home-caption {
+    margin-top: 8px;
+  }
+  #home-caption p {
+    font-size: 15px;
+  }
+  .dropdown {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    /*background-color: var(--accent);*/
+  }
+  button {
+    width: 100%;
+    margin: 0;
+    padding: 15px 0 15px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dark);
+    background-color: var(--light);
+    border-top: 1.5px solid var(--dark);
+  }
+  .drop-btn {
+    position: relative;
+    z-index: 2;
+    background-color: var(--dark);
+    border-color: var(--dark);
+    color: var(--light);
+  }
+  .drop-btn:hover, .drop-btn:focus {
+    background-color: var(--dark);
+    border-color: var(--dark);
+    color: var(--light);
+  }
+  button:hover {
+    background-color: var(--accent);
+    color: var(--light);
+  }
+  .drop-style {
+    display: none;
+    position: relative;
+    z-index: 2;
+    font-family: 'Hind', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+  .new-drop-style {
+    display: block;
+    /*background-color: red;*/
+  }
+  .reading-section li {
+    margin-bottom: 6px;
+    font-size: 16px;
+  }
 }
