@@ -14,52 +14,49 @@ Created with love by Emily Jean.
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <!-- CSS -->
-  <link rel="stylesheet" href="./css/Screen.css"/>
+  <link rel="stylesheet" href="Screen.css"/>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="./lib/favicon.ico"/>
-  <title>Gap Year — Emily Jean Liu</title>
+  <title>Blog — Em's Gap Year</title>
 </head>
 
 <body>
   <!--Title-->
   <div id="name-title">
-      <h1>Emily Jean Liu</h1>
+      <h1>Em's Gap Year</h1>
   </div>
   <!--Dropdown-->
   <div class="dropdown">
     <div id="drop-menu" class="drop-style">
       <button onclick="location.href='index.html'" type="button">Home</button>
-      <button onclick="location.href='gap.html'" type="button" id="current">Gap Year</button>
+      <button onclick="location.href='gap.html'" type="button" id="current">Blog</button>
       <button onclick="location.href='reading.html'" type="button">Reading</button>
       <button onclick="location.href='comp.html'" type="button">Compositions</button>
       <button onclick="location.href='about.html'" type="button">About</button>
     </div>
-    <button onclick="showDropdown()" class="drop-btn" type="button">Gap Year</button>
+    <button onclick="showDropdown()" class="drop-btn" type="button">Blog</button>
   </div>
   <!-- Navbar -->
   <div class="navbar">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="gap.html" id="current">Gap Year</a></li>
+      <li><a href="gap.html" id="current">Blog</a></li>
       <li><a href="reading.html">Reading</a></li>
       <li><a href="comp.html">Compositions</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
   </div>
 
-  <!--Gap Year-->
+  <!--Blog-->
   <div class="box">
     <div class="content">
-      <p>Coming soon...</p>
+      <a href="blog/website-launch.html"><h2>Website launch</h2></a>
+      <h6>August 31, 2017</h6>
+      <p>I launched my first, home-made personal website!</p>
     </div>
   </div>
   <!--JavaScript-->
-  <script>
-  function showDropdown(){
-    document.getElementById('drop-menu').classList.toggle("new-drop-style");
-    document.getElementById('nav').innerHTML("Menu");
+<script src="script.js"></script>
 
-  }
-  </script>
 </body>
 </html>

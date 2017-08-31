@@ -14,22 +14,22 @@ Created with love by Emily Jean.
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <!-- CSS -->
-  <link rel="stylesheet" href="./css/Screen.css"/>
+  <link rel="stylesheet" href="Screen.css"/>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="./lib/favicon.ico"/>
-  <title>Reading — Emily Jean Liu</title>
+  <title>Reading — Em's Gap Year</title>
 </head>
 
 <body>
   <!--Title-->
   <div id="name-title">
-      <h1>Emily Jean Liu</h1>
+      <h1>Em's Gap Year</h1>
   </div>
   <!--Dropdown-->
   <div class="dropdown">
     <div id="drop-menu" class="drop-style">
       <button onclick="location.href='index.html'" type="button">Home</button>
-      <button onclick="location.href='gap.html'" type="button">Gap Year</button>
+      <button onclick="location.href='gap.html'" type="button">Blog</button>
       <button onclick="location.href='reading.html'" type="button" id="current">Reading</button>
       <button onclick="location.href='comp.html'" type="button">Compositions</button>
       <button onclick="location.href='about.html'" type="button">About</button>
@@ -40,7 +40,7 @@ Created with love by Emily Jean.
   <div class="navbar">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="gap.html">Gap Year</a></li>
+      <li><a href="gap.html">Blog</a></li>
       <li><a href="reading.html" id="current">Reading</a></li>
       <li><a href="comp.html">Compositions</a></li>
       <li><a href="about.html">About</a></li>
@@ -50,7 +50,7 @@ Created with love by Emily Jean.
   <!--Reading-->
   <div class="box">
     <div class="content">
-      <h2 id="reading-header">Autumn 2017<h2>
+      <h3 id="reading-header">Autumn 2017</h3>
         <ul class="reading-section">
           <li><i>One Flew Over the Cuckoo's Nest</i> by Ken Kesey</li>
         </ul>
@@ -58,11 +58,7 @@ Created with love by Emily Jean.
   </div>
 
   <!--JavaScript-->
-  <script>
-  function showDropdown(){
-    document.getElementById('drop-menu').classList.toggle("new-drop-style");
-  }
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>

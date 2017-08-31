@@ -5,6 +5,7 @@
   --light: #fff;
   --dark: #000;
   --accent: #FC6634;
+  --midcolor: #FEE0C7;
 }
 * {
   margin: 0;
@@ -21,9 +22,7 @@ html, body {
 }
 p, ol {
   font: 18px 'EB Garamond', serif;
-}
-h2 {
-  font: bold 18px 'EB Garamond', serif
+  /*padding-left: 10px;*/
 }
 a {
   text-decoration: none;
@@ -38,29 +37,30 @@ ul {
   width: 100%;
   text-align: center;
 }
-#name-title h1 {
-  font-size: 40px;
-  font-family: 'EB Garamond', serif;
-  letter-spacing: 2px;
-}
-.reading-section {
-  padding-top: 10px;
-  font-weight: lighter;
-}
 #reading-header {
   text-align: center;
-}
-.content {
-  position: relative;
-  text-align: justify;
-  left: 25%;
-  width: 50%;
-  border-top: solid 2px var(--accent);
-  padding: 10px;
 }
 @media all and (min-width: 650px) {
   body {
     position: relative;
+  }
+  #name-title h1 {
+    font-size: 40px;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 2px;
+  }
+  h2 {
+    font: bold 24px 'EB Garamond', serif;
+    padding-bottom: 5px;
+  }
+  h3 {
+    font: bold 20px 'EB Garamond', serif;
+  }
+  h6 {
+    font: 13px 'Hind', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding-bottom: 5px;
   }
   a:link{
     color: var(--dark);
@@ -70,7 +70,8 @@ ul {
   }
   a:hover{
     color: var(--accent);
-    text-decoration: overline;
+    /*text-decoration: overline;*/
+    font-style: italic;
   }
   .dropdown {
     display: none;
@@ -99,11 +100,21 @@ ul {
   }
   #current{
     color: var(--accent);
-    text-decoration: overline;
+    /*text-decoration: overline;*/
+    font-style: italic;
+  }
+  .content {
+    background-color: var(--midcolor);
+    position: absolute;
+    text-align: left;
+    left: 10%;
+    width: 78%;
+    border-top: solid 2px var(--accent);
+    padding: 15px;
+    margin-bottom: 10px;
   }
   .section {
     height: 100%;
-    /*border-bottom: solid 2px;*/
   }
   .box {
     position: relative;
@@ -112,32 +123,57 @@ ul {
     width: 100%;
     text-align: center;
   }
-  .content {
-    position: relative;
-    text-align: justify;
-    left: 25%;
-    width: 50%;
-    border-top: solid 2px var(--accent);
-    padding: 10px;
-}
   #home-img {
     width: 600px;
   }
   #home-caption {
     margin-top: 10px;
   }
+  .reading-section {
+    font: 18px 'EB Garamond', serif;
+    padding-top: 10px;
+    font-weight: lighter;
+  }
 }
 
 @media all and (max-width: 649px) {
+  #name-title h1 {
+    font-size: 30px;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 2px;
+  }
+  h2 {
+    font: bold 22px 'EB Garamond', serif;
+    padding-bottom: 3px;
+  }
+  h3 {
+    font: bold 20px 'EB Garamond', serif;
+  }
+  h6 {
+    font: 13px 'Hind', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding-bottom: 5px;
+  }
   a:link, a:visited{
     color: var(--dark);
   }
   .navbar {
     display: none;
   }
+  .content {
+    /*background-color: var(--midcolor);*/
+    position: absolute;
+    text-align: left;
+    left: 10%;
+    width: 74%;
+    border-top: solid 2px var(--accent);
+    padding: 10px;
+    margin-bottom: 10px;
+  }
   .box {
     position: relative;
-    top: 80px;
+    top: 60px;
     width: 100%;
     text-align: center;
     z-index: 0;
@@ -166,8 +202,8 @@ ul {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--dark);
-    background-color: var(--light);
-    border-top: 1.5px solid var(--accent);
+    background-color: var(--midcolor);
+    border-top: 1.5px solid var(--light);
   }
   .drop-btn {
     position: relative;
@@ -198,10 +234,10 @@ ul {
   }
   .new-drop-style {
     display: block;
-    /*background-color: red;*/
   }
   .reading-section li {
-    margin-bottom: 6px;
-    font-size: 16px;
+    font: 16px 'EB Garamond', serif;
+    padding-top: 7px;
+    font-weight: lighter;
   }
 }
