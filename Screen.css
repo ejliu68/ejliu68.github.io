@@ -40,7 +40,51 @@ ul {
 #reading-header {
   text-align: center;
 }
+@keyframes fade {
+  /*0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }*/
+  0% {
+    opacity: 1;
+    transform: translate3d(-2%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transition: none;
+  }
+}
+/*@keyframes slide-forward {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transition: none;
+  }
+}
+@keyframes slide-backward {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transition: none;
+  }
+}*/
 @media all and (min-width: 650px) {
+  .effect {
+    animation-duration: 1s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+  }
+  .fade {
+    animation-name: fade;
+  }
   body {
     position: relative;
   }
@@ -105,13 +149,14 @@ ul {
   }
   .content {
     background-color: var(--midcolor);
-    position: absolute;
+    box-shadow: 8px 8px 5px #888888;
+    position: relative;
     text-align: left;
     left: 10%;
     width: 78%;
     border-top: solid 2px var(--accent);
     padding: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .section {
     height: 100%;
@@ -123,6 +168,7 @@ ul {
     width: 100%;
     text-align: center;
   }
+
   #home-img {
     width: 600px;
   }
@@ -163,7 +209,7 @@ ul {
   }
   .content {
     /*background-color: var(--midcolor);*/
-    position: absolute;
+    position: relative;
     text-align: left;
     left: 10%;
     width: 74%;
