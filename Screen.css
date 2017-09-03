@@ -1,21 +1,325 @@
 @import url('https://fonts.googleapis.com/css?family=Hind');
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
-body {
-  position: relative;
-  background-color: #fff;
+:root {
+  /*--light: #247F99;*/
+  --light: #fff;
+  --dark: #000;
+  --accent: #FC6634;
+  --midcolor: #FEE0C7;
+}
+* {
   margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
-h1 {
-  font-family: 'EB Garamond';
-  color: #000;
-  font-size: 50px;
+html, body {
+  height: 100%;
+  margin: 0 0 0 0;
+  background-color: var(--light);
 }
-.main-text {
-  position: relative;
+p, ol, ul {
+  font: 18px 'EB Garamond', serif;
+  /*padding-left: 10px;*/
+}
+a {
+  text-decoration: none;
+}
+ul {
+  text-align: center;
+  list-style-type: none;
+}
+#name-title {
+  position: absolute;
+  top: 10px;
+  width: 100%;
   text-align: center;
 }
-@media all and (max-width: 400px) {
-  h1 {
-    font-size: 30px;
+#reading-header {
+  text-align: center;
+}
+@keyframes fade {
+  /*0% {
+    opacity: 1;
   }
+  100% {
+    opacity: 1;
+  }*/
+  0% {
+    opacity: 1;
+    transform: translate3d(-2%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transition: none;
+  }
+}
+/*@keyframes slide-forward {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transition: none;
+  }
+}
+@keyframes slide-backward {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transition: none;
+  }
+}*/
+@media all and (min-width: 650px) {
+  .effect {
+    animation-duration: 1s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+  }
+  .fade {
+    animation-name: fade;
+  }
+  body {
+    position: relative;
+  }
+  #name-title h1 {
+    font-size: 40px;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 2px;
+  }
+  h2 {
+    font: bold 24px 'EB Garamond', serif;
+    padding-bottom: 5px;
+  }
+  h3 {
+    font: bold 20px 'EB Garamond', serif;
+  }
+  h6 {
+    font: 13px 'Hind', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding-bottom: 5px;
+  }
+  a:link{
+    color: var(--dark);
+  }
+  a:visited{
+    color: var(--dark);
+  }
+  a:hover{
+    color: var(--accent);
+    /*text-decoration: overline;*/
+    font-style: italic;
+  }
+  .dropdown {
+    display: none;
+  }
+  .navbar {
+    position: absolute;
+    margin-top: 10px;
+    top: 60px;
+    height: 40px;
+    width: 100%;
+  }
+  .navbar ul {
+    margin-top: 15px;
+  }
+  .navbar ul li {
+    display: inline;
+    padding: 0 20px 0 20px;
+    text-decoration: none;
+  }
+  .navbar ul li a {
+    font-family: 'Hind', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+  #current{
+    color: var(--accent);
+    /*text-decoration: overline;*/
+    font-style: italic;
+  }
+  .content {
+    position: relative;
+    text-align: left;
+    left: 10%;
+    width: 78%;
+    border-top: solid 2px var(--accent);
+    padding: 15px 15px 25px 15px;
+    margin-bottom: 20px;
+  }
+  .blogpost {
+    background-color: var(--midcolor);
+    box-shadow: 5px 5px 5px #888888;
+  }
+  /*.section {
+    height: 100%;
+  }*/
+  .box {
+    position: relative;
+    top: 125px;
+    /*height: 100%;*/
+    width: 100%;
+    text-align: center;
+  }
+  #home-img {
+    width: 550px;
+  }
+  #home-caption {
+    margin-top: 10px;
+  }
+  .reading-section {
+    font: 18px 'EB Garamond', serif;
+    /*padding-top: 10px;*/
+    font-weight: lighter;
+  }
+  .blogtext h2 {
+    font-size: 35px;
+  }
+  .blogtext p, li {
+    margin-top: 10px;
+  }
+  .blogtext ul {
+    text-align: left;
+    list-style-type: decimal;
+  }
+  .back {
+    text-align: left;
+  }
+  #back-to-blogs:hover {
+    color: var(--accent);
+  }
+}
+
+@media all and (max-width: 649px) {
+  #name-title h1 {
+    font-size: 35px;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 2px;
+  }
+  h2 {
+    font: bold 22px 'EB Garamond', serif;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  h3 {
+    font: bold 20px 'EB Garamond', serif;
+  }
+  h6 {
+    font: 13px 'Hind', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding-bottom: 5px;
+  }
+  a:link, a:visited{
+    color: var(--dark);
+    /*text-decoration: underline;*/
+  }
+  a:hover{
+    color: var(--accent);
+  }
+  .navbar {
+    display: none;
+  }
+  .content {
+    position: relative;
+    text-align: left;
+    left: 10%;
+    width: 74%;
+    border-top: solid 2px var(--accent);
+    padding: 10px 10px 15px 10px;
+    margin-bottom: 10px;
+  }
+  .blogpost {
+    background-color: var(--midcolor);
+    /*box-shadow: 5px 5px 5px #888888;*/
+  }
+  .box {
+    position: relative;
+    top: 65px;
+    width: 100%;
+    text-align: center;
+    z-index: 0;
+  }
+  #home-img {
+    width: 320px;
+    z-index: 1;
+  }
+  #home-caption {
+    margin-top: 8px;
+  }
+  #home-caption p {
+    font-size: 15px;
+  }
+  .dropdown {
+    position: fixed;
+    text-align: center;
+    bottom: 49px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    /*background-color: var(--accent);*/
+  }
+button {
+    width: 100%;
+    margin: 0;
+    padding: 15px 0 15px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dark);
+    background-color: var(--midcolor);
+    border-top: 1.5px solid var(--light);
+  }
+  .drop-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--light);
+  }
+  .drop-btn:hover, .drop-btn:focus {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--light);
+  }
+  button:hover {
+    background-color: var(--accent);
+    color: var(--light);
+    font-style: italic;
+  }
+  .drop-style {
+    display: none;
+    position: relative;
+    z-index: 2;
+    font-family: 'Hind', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+  .new-drop-style {
+    display: block;
+  }
+  .blogpost a:link {
+    text-decoration: underline;
+  }
+  .reading-section li {
+    font: 16px 'EB Garamond', serif;
+    padding-top: 7px;
+    font-weight: lighter;
+  }
+  .back {
+    display: none;
+  }
+
 }
